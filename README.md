@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Perrin
 - 👀 I’m interested in Blockchain, Ethereum, Polygon/Matic
-- 🌱 I’m currently learning React, Solidity
+- 🌱 I develop on Next/React, Solidity
 - 💞️ I’m looking to collaborate on Dapp
 - 📫 How to reach me: perrin.grandne@gmail.com
 
