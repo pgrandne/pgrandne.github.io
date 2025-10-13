@@ -11,14 +11,8 @@ export default function Home() {
       <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 ">
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
           <div className="relative w-full flex gap-1 md:gap-0 flex-col md:flex-row">
-            <div
-              className="relative p-1 text-left md:text-left w-full bg-background shadow-elevation-light dark:shadow-elevation-dark-three md:dark:shadow-elevation-dark"
-              style={{ opacity: '1', transform: 'none' }}
-            >
-              <div
-                className="space-y-2 md:space-y-8 lg:space-y-10 h-full mx-auto md:mx-0 w-full shadow-elevation-light dark:shadow-elevation-dark-three md:dark:shadow-elevation-dark px-4 py-12 md:px-8 p-1.5 bg-card/50"
-                style={{ opacity: 1 }}
-              >
+            <div className="relative p-1 text-left md:text-left w-full bg-background shadow-elevation-light dark:shadow-elevation-dark-three md:dark:shadow-elevation-dark">
+              <div className="space-y-2 md:space-y-8 lg:space-y-10 h-full mx-auto md:mx-0 w-full shadow-elevation-light dark:shadow-elevation-dark-three md:dark:shadow-elevation-dark px-4 py-12 md:px-8 p-1.5 bg-card/50">
                 <div className="absolute bottom-0 right-12 hidden md:block">
                   <p
                     className="relative inline-block [perspective:500px] [--base-color:#a1a1aa] [--base-gradient-color:#000] dark:[--base-color:#71717a] dark:[--base-gradient-color:#ffffff]"
@@ -27,7 +21,7 @@ export default function Home() {
                     Welcome
                   </p>
                 </div>
-                <div className="md:px-2 pt-2 lg:pt-18" style={{ opacity: '1', transform: 'none' }}>
+                <div className="md:px-2 pt-2 lg:pt-18">
                   <div className="hidden xl:block xl:space-y-8 w-150">
                     <div className="relative block md:py-4 rounded-lg md:leading-[6.5rem] text-[4rem] xl:leading-10 sm:text-6xl lg:text-[8rem] font-black tracking-tight">
                       <div className="flex flex-wrap justify-start whitespace-nowrap">
