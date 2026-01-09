@@ -1,21 +1,23 @@
+import { useTranslations } from 'next-intl'
 import { NavbarToggle } from './NavbarToggle'
 
 export const Navbar = () => {
+  const t = useTranslations()
   const navItems = [
     {
       name: 'Vision',
       link: '#vision',
     },
     {
-      name: 'Compétences',
+      name: t('skills'),
       link: '#skills',
     },
     {
-      name: 'Projets',
+      name: t('projects'),
       link: '#projects',
     },
     {
-      name: 'CV',
+      name: t('resume'),
       link: '#resume',
     },
     {
