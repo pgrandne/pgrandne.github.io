@@ -9,7 +9,7 @@ export const CardName = () => {
     <div className="flex-1 relative p-1 text-left md:text-left w-full bg-background shadow-elevation-light dark:shadow-elevation-dark-three md:dark:shadow-elevation-dark">
       <div className="flex flex-col justify-around h-full mx-auto md:mx-0 w-full shadow-elevation-light dark:shadow-elevation-dark-three md:dark:shadow-elevation-dark px-4 py-12 md:px-8 p-1.5 bg-card/50">
         <div className="md:px-2 pt-2 lg:pt-18">
-          <div className="hidden xl:block xl:space-y-8 w-full">
+          <div className="xl:space-y-8 w-full">
             <div className="relative block md:py-4 rounded-lg md:leading-26 text-[4rem] xl:leading-10 sm:text-6xl lg:text-[8rem] font-black tracking-tight">
               <div className="flex flex-wrap justify-start whitespace-nowrap">
                 {'Perrin'.split('').map((letter, i) => (
@@ -36,7 +36,7 @@ export const CardName = () => {
         >
           {t('hero_subtitle')}
         </p>
-        <div className="flex flex-col justify-end gap-5 px-2 sm:flex-row sm:gap-4 md:gap-8">
+        <div className="flex justify-end gap-8 px-2">
           <div className="relative">
             <div
               className="pointer-events-none absolute inset-0 blur-xl opacity-70 animate-gradient-rotate"

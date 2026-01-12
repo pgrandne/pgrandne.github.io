@@ -1,7 +1,13 @@
 import { useTranslations } from 'next-intl'
 import { NavbarToggle } from './NavbarToggle'
+import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
+import { Button } from './ui/button'
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   const t = useTranslations()
   const navItems = [
     {
@@ -27,9 +33,10 @@ export const Navbar = () => {
   ]
 
   return (
-    <div className="p-1 w-full bg-background shadow-elevation-light dark:shadow-elevation-dark-three mb-3">
+    <nav className="p-1 w-full bg-background shadow-elevation-light dark:shadow-elevation-dark-three mb-10 md:mb-3">
       <div className="p-5 h-14 flex justify-between items-center shadow-elevation-light dark:shadow-elevation-dark-three bg-card/50">
-        <div className="flex gap-5 text-sm">
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex gap-5 text-sm">
           {navItems.map((navItem, index) => (
             <a key={index} href={navItem.link} className="text-muted-foreground hover:text-foreground cursor-not-allowed">
               {navItem.name}
@@ -37,8 +44,34 @@ export const Navbar = () => {
           ))}
         </div>
 
+        {/* MOBILE MENU */}
+        <div className="flex items-center gap-4 md:hidden">
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" aria-label="Menu">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="top">
+              <div className="flex flex-col gap-4 m-8">
+                {navItems.map((navItem, index) => (
+                  <a
+                    key={index}
+                    href={navItem.link}
+                    className="text-lg font-medium text-muted-foreground hover:text-foreground border-b pb-2 transition-all cursor-not-allowed"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {navItem.name}
+                  </a>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        {/* TOGGLE */}
         <NavbarToggle />
       </div>
-    </div>
+    </nav>
   )
 }

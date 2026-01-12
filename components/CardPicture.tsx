@@ -16,7 +16,7 @@ export const CardPicture = () => {
   }
 
   return (
-    <div className="flex-1 min-w-0 p-1 w-full aspect-3/4 bg-background shadow-elevation-light dark:shadow-elevation-dark-three">
+    <div className="hidden md:block flex-1 min-w-0 p-1 w-full aspect-3/4 bg-background shadow-elevation-light dark:shadow-elevation-dark-three">
       <div className="relative h-full w-full shadow-elevation-light dark:shadow-elevation-dark-three overflow-hidden">
         {isLoading && (
           <div className="absolute inset-0 z-0 flex items-center justify-center">
