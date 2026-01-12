@@ -1,12 +1,37 @@
+import { useState } from 'react'
 import { PixelatedCanvas } from './ui/pixelated-canvas'
+import { LoaderFour } from './ui/loader'
+import { useTranslations } from 'next-intl'
+import { cn } from '@/lib/utils'
 
 export const CardPicture = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  const t = useTranslations()
+
+  const handleImageLoad = () => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 3000)
+  }
+
   return (
     <div className="flex-1 min-w-0 p-1 w-full aspect-3/4 bg-background shadow-elevation-light dark:shadow-elevation-dark-three">
       <div className="relative h-full w-full shadow-elevation-light dark:shadow-elevation-dark-three overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center object-contain">
+        {isLoading && (
+          <div className="absolute inset-0 z-0 flex items-center justify-center">
+            <LoaderFour text={t('loading')} />
+          </div>
+        )}
+        <div
+          className={cn(
+            'absolute inset-0 flex items-center justify-center object-contain transition-opacity duration-3000',
+            !isLoading ? 'opacity-100' : 'opacity-0',
+          )}
+        >
           <PixelatedCanvas
             src="/profile_picture.jpg"
+            onLoad={handleImageLoad}
             responsive={true}
             width={600}
             height={800}
