@@ -120,6 +120,27 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+}
+
+@keyframes spin-gradient {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@layer utilities {
+  .animate-gradient-rotate {
+    animation: spin-gradient 3s linear infinite;
+  }
 }
 
 @layer utilities {
