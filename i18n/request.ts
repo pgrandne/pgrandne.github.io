@@ -6,5 +6,6 @@ export default getRequestConfig(async () => {
   return {
     locale,
     messages: (await import(`./dictionaries/${locale}.json`)).default,
+    timeZone: 'Europe/Paris',
   }
 })
