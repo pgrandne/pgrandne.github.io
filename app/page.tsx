@@ -3,6 +3,7 @@
 import { CardPicture } from '@/components/CardPicture'
 import { CardName } from '@/components/CardName'
 import { Navbar } from '@/components/Navbar'
+import { TimelineResume } from '@/components/TimelineResume'
 import { GithubIcon, LinkedinIcon } from 'lucide-react'
 import { useLangStore } from '@/store/useLangStore'
 import { NextIntlClientProvider } from 'next-intl'
@@ -23,6 +24,9 @@ export default function Home() {
             <section className="flex gap-3 w-full">
               <CardName />
               <CardPicture />
+            </section>
+            <section className="flex gap-3 w-full">
+              <TimelineResume />
             </section>
           </main>
           <footer className="absolute w-full max-w-7xl bottom-10 flex justify-center items-center gap-20 ">
