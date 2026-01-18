@@ -12,7 +12,7 @@ export const CardPicture = () => {
   const handleImageLoad = () => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 3000)
+    }, 2000)
   }
 
   return (

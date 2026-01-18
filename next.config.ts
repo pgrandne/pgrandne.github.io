@@ -3,7 +3,10 @@ import createNextIntlPlugin from 'next-intl/plugin'
 
 const nextConfig: NextConfig = {
   output: 'export',
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    domains: ['api.microlink.io'],
+  },
 }
 
 const withNextIntl = createNextIntlPlugin()
