@@ -1,11 +1,12 @@
+import { cn } from '@/lib/utils'
 import { EncryptedText } from './ui/encrypted-text'
 
-export const Progress = ({ textProgress }: { textProgress: string }) => (
+export const Progress = ({ textProgress, footer = false }: { textProgress: string; footer?: boolean }) => (
   <p className="text-base text-center">
     <EncryptedText
       text={textProgress}
-      encryptedClassName="text-neutral-500"
-      revealedClassName="dark:text-white text-black font-alpha-lyrae"
+      encryptedClassName={cn('text-neutral-500', footer && 'text-sm')}
+      revealedClassName={cn('dark:text-white text-black', footer ? 'text-sm' : 'font-alpha-lyrae')}
       revealDelayMs={100}
     />
   </p>
