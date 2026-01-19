@@ -4,12 +4,14 @@ import { CardPicture } from '@/components/CardPicture'
 import { CardName } from '@/components/CardName'
 import { Navbar } from '@/components/Navbar'
 import { TimelineResume } from '@/components/TimelineResume'
-import { GithubIcon, LinkedinIcon } from 'lucide-react'
 import { useLangStore } from '@/store/useLangStore'
 import { NextIntlClientProvider } from 'next-intl'
 import fr from '@/i18n/dictionaries/fr.json'
 import en from '@/i18n/dictionaries/en.json'
-import { LinkPreview } from '@/components/ui/link-preview'
+import { Vision } from '@/components/Vision'
+import { HeroLinks } from '@/components/HeroLinks'
+import { Contact } from '@/components/Contact'
+import { Progress } from '@/components/Progress'
 
 const allMessages = { fr, en }
 
@@ -27,35 +29,20 @@ export default function Home() {
                 <CardName />
                 <CardPicture />
               </div>
-              <div className="absolute bottom-10 md:bottom-5 flex justify-center gap-20">
-                <LinkPreview url="https://tailwindcss.com" className="flex items-center gap-2">
-                  <GithubIcon />
-                  Github
-                </LinkPreview>
-                <LinkPreview url="https://tailwindcss.com" className="flex items-center gap-2">
-                  <LinkedinIcon />
-                  Linkedin
-                </LinkPreview>
-              </div>
+              <HeroLinks />
             </section>
-
-            <section className="flex gap-3 w-full">
+            <section id="vision">
+              <Vision />
+            </section>
+            <section id="projects" className="flex gap-3 w-full">
               <TimelineResume />
             </section>
+            <section id="contact" className="flex gap-3 w-full">
+              <Contact />
+            </section>
           </main>
-          <footer className="hidden md:flex absolute w-full max-w-7xl bottom-10 justify-center items-center gap-20 ">
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://github.com/pgrandne/"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://www.linkedin.com/in/grandne/"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
+          <footer className="flex w-full max-w-7xl mt-20 justify-center items-center gap-20">
+            <Progress textProgress="@2026 Perrin GRANDNE" footer={true} />
           </footer>
         </div>
       </div>
