@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { Button } from './ui/button'
+import { cn } from '@/lib/utils'
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -38,7 +39,14 @@ export const Navbar = () => {
         {/* DESKTOP MENU */}
         <div className="hidden md:flex gap-5 text-sm">
           {navItems.map((navItem, index) => (
-            <a key={index} href={navItem.link} className="text-muted-foreground hover:text-foreground cursor-not-allowed">
+            <a
+              key={index}
+              href={navItem.link}
+              className={cn(
+                'text-muted-foreground hover:text-foreground',
+                ['#skills', '#resume'].includes(navItem.link) ? 'opacity-50 pointer-events-none' : '',
+              )}
+            >
               {navItem.name}
             </a>
           ))}
@@ -58,7 +66,10 @@ export const Navbar = () => {
                   <a
                     key={index}
                     href={navItem.link}
-                    className="text-lg font-medium text-muted-foreground hover:text-foreground border-b pb-2 transition-all cursor-not-allowed"
+                    className={cn(
+                      'text-lg font-medium text-muted-foreground hover:text-foreground border-b pb-2 transition-all',
+                      ['#skills', '#resume'].includes(navItem.link) ? 'opacity-50 pointer-events-none' : '',
+                    )}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {navItem.name}
