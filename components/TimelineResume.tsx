@@ -49,7 +49,7 @@ export function TimelineResume() {
       title: '2025',
       content: (
         <div>
-          <p className="mb-8 text-2xl font-normal text-neutral-800 md:text-sm dark:text-neutral-200">{t('project_2025')}</p>
+          <p className="mb-8 text-2xl font-normal text-neutral-800 md:text-sm dark:text-neutral-200">{t('2025')}</p>
           <div className="grid grid-cols-2 gap-4">
             <a href="https://beta.gouv.fr/startups/nomad.html" target="_blank" rel="noopener noreferrer" title="beta.gouv.fr">
               <img
@@ -100,7 +100,7 @@ export function TimelineResume() {
       title: '2024',
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">{t('project_2024')}</p>
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">{t('2024')}</p>
           <div className="grid grid-cols-2 gap-4">
             <a href="https://nomad.defense.gouv.fr/connexion" target="_blank" rel="noopener noreferrer" title="NOMAD">
               <img
@@ -169,7 +169,7 @@ export function TimelineResume() {
     // },
   ]
   return (
-    <div className="p-1 w-full bg-background shadow-elevation-light dark:shadow-elevation-dark-three mb-10 md:mb-3">
+    <div className="p-1 w-full bg-background shadow-elevation-light dark:shadow-elevation-dark-three">
       <div className="p-5 flex flex-col items-start shadow-elevation-light dark:shadow-elevation-dark-three bg-card/50">
         <div className="max-w-lg py-20 text-2xl font-bold tracking-tight md:text-4xl">
           <PointerHighlight>
