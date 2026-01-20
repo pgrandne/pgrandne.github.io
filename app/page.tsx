@@ -12,6 +12,7 @@ import { Vision } from '@/components/Vision'
 import { HeroLinks } from '@/components/HeroLinks'
 import { Contact } from '@/components/Contact'
 import { Progress } from '@/components/Progress'
+import { Footer } from '@/components/Footer'
 
 const allMessages = { fr, en }
 
@@ -24,7 +25,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-4">
           <Navbar />
           <main className="flex flex-col gap-8 items-center md:items-start">
-            <section className="relative flex flex-col items-center gap-3 w-full h-[calc(100vh-140px)]">
+            <section className="relative flex flex-col items-center gap-3 w-full h-[calc(100dvh-140px)]">
               <div className="flex gap-3 w-full mt-20 md:mt-0">
                 <CardName />
                 <CardPicture />
@@ -41,8 +42,8 @@ export default function Home() {
               <Contact />
             </section>
           </main>
-          <footer className="flex w-full max-w-7xl mt-20 justify-center items-center gap-20">
-            <Progress textProgress="@2026 Perrin GRANDNE" footer={true} />
+          <footer>
+            <Footer />
           </footer>
         </div>
       </div>
