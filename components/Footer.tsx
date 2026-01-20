@@ -8,8 +8,6 @@ export const Footer = () => {
   const ref = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
 
-  console.log('visible:', visible)
-
   useEffect(() => {
     const el = ref.current
     if (!el) return
