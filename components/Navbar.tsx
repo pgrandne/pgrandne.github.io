@@ -24,10 +24,6 @@ export const Navbar = () => {
       link: '#projects',
     },
     {
-      name: t('resume'),
-      link: '#resume',
-    },
-    {
       name: 'Contact',
       link: '#contact',
     },
@@ -68,7 +64,7 @@ export const Navbar = () => {
                     href={navItem.link}
                     className={cn(
                       'text-lg font-medium text-muted-foreground hover:text-foreground border-b pb-2 transition-all',
-                      ['#skills', '#resume'].includes(navItem.link) ? 'opacity-50 pointer-events-none' : '',
+                      ['#skills'].includes(navItem.link) ? 'opacity-50 pointer-events-none' : '',
                     )}
                     onClick={() => setIsMenuOpen(false)}
                   >
