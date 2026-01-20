@@ -1,7 +1,6 @@
 {
   "skills": "Skills",
   "projects": "Projects",
-  "resume": "Resume",
   "hero_subtitle": "Data & Software Solutions",
   "button_projects": "See my projects",
   "in_progress": "Coming Soon",
@@ -18,5 +17,11 @@
       "- To enhance the accessibility, efficiency, and relevance of public services in line with citizens needs.",
       "- To optimize the use of public resources by strengthening internal capabilities and developing sovereign, secure, and fully controlled digital services."
     ]
+  },
+  "info": {
+    "email": "Email",
+    "phone": "Phone",
+    "liame": "bW9jLmxpYW1nQGVuZG5hcmcubmlycmVw",
+    "enohp": "NTkgMTQgMzEgMDcgMSAzMys="
   }
 }

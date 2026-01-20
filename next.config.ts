@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
-    domains: ['api.microlink.io'],
+    remotePatterns: [new URL('https://api.microlink.io')],
   },
 }
 

@@ -1,7 +1,6 @@
 {
   "skills": "Compétences",
   "projects": "Projets",
-  "resume": "CV",
   "hero_subtitle": "Data & Solutions Numériques",
   "button_projects": "Voir mes projets",
   "in_progress": "En cours de construction",
@@ -12,11 +11,18 @@
     "2025": "Accélération du service NOMAD et passage en startup d'état"
   },
   "vision": {
-    "intro": "Ingénieur de formation je travaille depuis plus de 15 ans à l’intersection du numérique et de l’intérêt général, en mettant la technologie au service de projets porteurs de sens pour la société.",
+    "intro": "Ingénieur de formation je travaille depuis plus de 15 ans à l’intersection du numérique et de l’intérêt général, en mettant la technologie au service de projets porteurs de sens pour ",
+    "split": ["la société", "le citoyen", "le secteur public"],
     "background": "Mon parcours, entre privé, ministères et entrepreneuriat, s’articule autour d’une double ambition :",
     "objectives": [
       "- Rendre les services publics plus accessibles, performants et alignés sur les besoins réels.",
       "- Optimiser l’utilisation des ressources publiques, en renforçant les compétences internes et en développant des services numériques souverains et maitrisés."
     ]
+  },
+  "info": {
+    "email": "Courriel",
+    "phone": "Téléphone",
+    "liame": "bW9jLmxpYW1nQGVuZG5hcmcubmlycmVw",
+    "enohp": "NTkgMTQgMzEgMDcgMTA="
   }
 }

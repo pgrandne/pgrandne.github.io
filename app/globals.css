@@ -142,9 +142,6 @@
   .animate-gradient-rotate {
     animation: spin-gradient 3s linear infinite;
   }
-}
-
-@layer utilities {
   .font-ss01 {
     font-feature-settings: 'ss01' 1 !important;
   }
@@ -200,6 +197,10 @@
       0px 1px 2px var(--tw-shadow-color, #ffffff0d) inset, 0px 0px 0px 1px var(--tw-shadow-color, #ffffff08) inset,
       0px -2px 4px var(--tw-shadow-color, #0003) inset, 0px 1px 1px var(--tw-shadow-color, #ffffff03);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .rev {
+    direction: rtl;
+    unicode-bidi: bidi-override;
   }
 }
 
