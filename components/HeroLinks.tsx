@@ -27,11 +27,11 @@ export const HeroLinks = () => {
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none',
       )}
     >
-      <LinkPreview url="https://tailwindcss.com" className="flex items-center gap-2">
+      <LinkPreview url="https://github.com/pgrandne/" className="flex items-center gap-2">
         <GithubIcon />
         Github
       </LinkPreview>
-      <LinkPreview url="https://tailwindcss.com" className="flex items-center gap-2">
+      <LinkPreview url="https://www.linkedin.com/in/grandne/" className="flex items-center gap-2">
         <LinkedinIcon />
         Linkedin
       </LinkPreview>
