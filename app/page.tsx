@@ -11,8 +11,6 @@ import en from '@/i18n/dictionaries/en.json'
 import { Vision } from '@/components/Vision'
 import { HeroLinks } from '@/components/HeroLinks'
 import { Contact } from '@/components/Contact'
-import { Progress } from '@/components/Progress'
-import { Footer } from '@/components/Footer'
 
 const allMessages = { fr, en }
 
@@ -43,7 +41,7 @@ export default function Home() {
             </section>
           </main>
           <footer>
-            <Footer />
+            <HeroLinks variant="bottom" />
           </footer>
         </div>
       </div>

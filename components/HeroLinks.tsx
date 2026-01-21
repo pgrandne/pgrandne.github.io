@@ -3,27 +3,40 @@ import { LinkPreview } from './ui/link-preview'
 import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 
-export const HeroLinks = () => {
-  const [isVisible, setIsVisible] = useState(true)
+type HeroLinksVariant = 'top' | 'bottom'
+
+interface HeroLinksProps {
+  variant?: HeroLinksVariant
+}
+
+export const HeroLinks = ({ variant = 'top' }: HeroLinksProps) => {
+  const [isVisible, setIsVisible] = useState(variant === 'top')
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsVisible(false)
+      const scrollPosition = window.scrollY
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+
+      if (variant === 'top') {
+        setIsVisible(scrollPosition <= 50)
       } else {
-        setIsVisible(true)
+        const isAtBottom = scrollPosition + windowHeight >= documentHeight - 100
+        setIsVisible(isAtBottom)
       }
     }
 
     window.addEventListener('scroll', handleScroll)
+    handleScroll()
 
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [variant])
 
   return (
     <div
       className={cn(
-        'absolute bottom-10 md:bottom-5 flex justify-center gap-20 transition-opacity duration-500',
+        'flex justify-center gap-20 transition-opacity duration-500',
+        variant === 'top' ? 'absolute bottom-10 md:bottom-5' : 'mt-10',
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none',
       )}
     >
