@@ -1,6 +1,4 @@
 {
-  "skills": "Compétences",
-  "projects": "Projets",
   "hero_subtitle": "Data & Solutions Numériques",
   "button_projects": "Voir mes projets",
   "in_progress": "En cours de construction",
@@ -9,6 +7,9 @@
     "title": "Projets",
     "2024": "Développement du service numérique NOMAD",
     "2025": "Accélération du service NOMAD et passage en startup d'état"
+  },
+  "skills": {
+    "title": "Compétences"
   },
   "vision": {
     "intro": "Ingénieur de formation je travaille depuis plus de 15 ans à l’intersection du numérique et de l’intérêt général, en mettant la technologie au service de projets porteurs de sens pour ",

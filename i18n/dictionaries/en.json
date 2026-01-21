@@ -1,6 +1,4 @@
 {
-  "skills": "Skills",
-  "projects": "Projects",
   "hero_subtitle": "Data & Software Solutions",
   "button_projects": "See my projects",
   "in_progress": "Coming Soon",
@@ -9,6 +7,9 @@
     "title": "Projects",
     "2024": "Building the NOMAD digital service",
     "2025": "Scaling up the NOMAD service and transition into a government startup"
+  },
+  "skills": {
+    "title": "Skills"
   },
   "vision": {
     "intro": "Trained as an engineer, I have been working for 15 years at the intersection of digital technology and the public interest, leveraging technology to support initiatives that serve the common good.",

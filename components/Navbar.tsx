@@ -16,11 +16,11 @@ export const Navbar = () => {
       link: '#vision',
     },
     {
-      name: t('skills'),
+      name: t('skills.title'),
       link: '#skills',
     },
     {
-      name: t('projects'),
+      name: t('project.title'),
       link: '#projects',
     },
     {
@@ -35,14 +35,7 @@ export const Navbar = () => {
         {/* DESKTOP MENU */}
         <div className="hidden md:flex gap-5 text-sm">
           {navItems.map((navItem, index) => (
-            <a
-              key={index}
-              href={navItem.link}
-              className={cn(
-                'text-muted-foreground hover:text-foreground',
-                ['#skills', '#resume'].includes(navItem.link) ? 'opacity-50 pointer-events-none' : '',
-              )}
-            >
+            <a key={index} href={navItem.link} className="text-muted-foreground hover:text-foreground">
               {navItem.name}
             </a>
           ))}
@@ -72,10 +65,7 @@ export const Navbar = () => {
                         }
                       }, 300)
                     }}
-                    className={cn(
-                      'text-lg font-medium text-muted-foreground hover:text-foreground border-b pb-2 transition-all text-left',
-                      ['#skills'].includes(navItem.link) ? 'opacity-50 pointer-events-none' : '',
-                    )}
+                    className="text-lg font-medium text-muted-foreground hover:text-foreground border-b pb-2 transition-all text-left"
                   >
                     {navItem.name}
                   </button>

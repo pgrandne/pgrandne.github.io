@@ -14,7 +14,6 @@ export const Vision = () => {
             <span>Vision</span>
           </PointerHighlight>
         </div>
-        <div></div>
         <motion.div className="mb-10 md:mb-16">
           <LayoutTextFlip text={t('intro')} words={t.raw('split')} />
         </motion.div>
