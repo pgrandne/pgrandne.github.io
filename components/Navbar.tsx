@@ -59,17 +59,26 @@ export const Navbar = () => {
             <SheetContent side="top">
               <div className="flex flex-col gap-4 m-8">
                 {navItems.map((navItem, index) => (
-                  <a
+                  <button
                     key={index}
-                    href={navItem.link}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setIsMenuOpen(false)
+                      setTimeout(() => {
+                        const element = document.querySelector(navItem.link)
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' })
+                          window.history.pushState(null, '', navItem.link)
+                        }
+                      }, 300)
+                    }}
                     className={cn(
-                      'text-lg font-medium text-muted-foreground hover:text-foreground border-b pb-2 transition-all',
+                      'text-lg font-medium text-muted-foreground hover:text-foreground border-b pb-2 transition-all text-left',
                       ['#skills'].includes(navItem.link) ? 'opacity-50 pointer-events-none' : '',
                     )}
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     {navItem.name}
-                  </a>
+                  </button>
                 ))}
               </div>
             </SheetContent>
