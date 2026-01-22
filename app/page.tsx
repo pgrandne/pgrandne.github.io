@@ -11,6 +11,7 @@ import en from '@/i18n/dictionaries/en.json'
 import { Vision } from '@/components/Vision'
 import { HeroLinks } from '@/components/HeroLinks'
 import { Contact } from '@/components/Contact'
+import { Skills } from '@/components/Skills'
 
 const allMessages = { fr, en }
 
@@ -30,8 +31,11 @@ export default function Home() {
               </div>
               <HeroLinks />
             </section>
-            <section id="vision">
+            <section id="vision" className="flex gap-3 w-full">
               <Vision />
+            </section>
+            <section id="skills" className="flex gap-3 w-full">
+              <Skills />
             </section>
             <section id="projects" className="flex gap-3 w-full">
               <TimelineResume />
