@@ -1,14 +1,10 @@
 import { useTranslations } from 'next-intl'
 import { PointerHighlight } from './ui/pointer-highlight'
 import { AnimatedTooltip } from './ui/animated-tooltip'
-import { SKILL_LIST } from '@/lib/content'
+import { DEV_LIST, INFRA_LIST, TOOLS_LIST } from '@/lib/content'
 
 export const Skills = () => {
   const t = useTranslations('skills')
-
-  const midIndex = Math.ceil(SKILL_LIST.length / 2)
-  const firstHalf = SKILL_LIST.slice(0, midIndex)
-  const secondHalf = SKILL_LIST.slice(midIndex)
 
   return (
     <div className="p-1 w-full bg-background shadow-elevation-light dark:shadow-elevation-dark-three">
@@ -19,11 +15,23 @@ export const Skills = () => {
           </PointerHighlight>
         </div>
         <p className="text-xl/10 md:text-2xl/12 mb-6 md:mb-8">{t('description')}</p>
-        <div className="flex flex-row items-center justify-center mb-10 w-full">
-          <AnimatedTooltip items={firstHalf} />
+        <div className="text-xl/10 md:text-2xl/12 w-full">
+          <p>{t('development')}</p>
+          <div className="flex flex-row items-center justify-center mb-10 w-full">
+            <AnimatedTooltip items={DEV_LIST} />
+          </div>
         </div>
-        <div className="flex flex-row items-center justify-center mb-10 w-full">
-          <AnimatedTooltip items={secondHalf} />
+        <div className="text-xl/10 md:text-2xl/12 w-full">
+          <p>{t('infra')}</p>
+          <div className="flex flex-row items-center justify-center mb-10 w-full">
+            <AnimatedTooltip items={INFRA_LIST} />
+          </div>
+        </div>
+        <div className="text-xl/10 md:text-2xl/12 w-full">
+          <p>{t('tools')}</p>
+          <div className="flex flex-row items-center justify-center mb-10 w-full">
+            <AnimatedTooltip items={TOOLS_LIST} />
+          </div>
         </div>
 
         {/* Mon expertise couvre notamment :

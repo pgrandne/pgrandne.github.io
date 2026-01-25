@@ -10,7 +10,10 @@
   },
   "skills": {
     "title": "Compétences",
-    "description": "Outils et frameworks utilisés :"
+    "description": "J’interviens sur l’ensemble du cycle de développement, de la conception applicative à la mise en production, en m’appuyant sur un socle technique moderne et éprouvé.",
+    "development": "Développement & frameworks :",
+    "infra": "Infrastructure, cloud & bases de données :",
+    "tools": "Outillage, qualité & collaboration :"
   },
   "vision": {
     "intro": "Ingénieur de formation je travaille depuis plus de 15 ans à l’intersection du numérique et de l’intérêt général, en mettant la technologie au service de projets porteurs de sens pour ",
