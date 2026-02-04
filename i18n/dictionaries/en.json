@@ -5,8 +5,11 @@
   "loading": "Loading...",
   "project": {
     "title": "Projects",
-    "2024": "Building the NOMAD digital service",
-    "2025": "Scaling up the NOMAD service and transition into a government startup"
+    "2025": "Scaling up the NOMAD service and transition into a government startup",
+    "2024": "Building the NOMAD digital service for the Ministry of Armed Forces of France",
+    "2023": "Creation of a Web3 organization recognized at several global hackathons",
+    "2022": "Public-interest entrepreneur and technical lead of the DASES project for the Ministry of Education",
+    "2021": "Lead Data Scientist focused on reducing water losses at Itron across Europe, the Middle East, Africa, Asia, and Oceania"
   },
   "skills": {
     "title": "Skills",
