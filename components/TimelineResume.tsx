@@ -75,7 +75,7 @@ export function TimelineResume() {
         <div>
           <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">{t('2023')}</p>
           <div className="grid grid-cols-2 gap-4">
-            <a href="https://irruptionlab-git-main-pgrandne.vercel.app/" target="_blank" rel="noopener noreferrer" title="NOMAD">
+            <a href="https://irruptionlab-git-main-pgrandne.vercel.app/" target="_blank" rel="noopener noreferrer" title="Irruption Lab">
               <img
                 src="./projects/irruptionlab.png"
                 alt="irruption lab image "
@@ -84,7 +84,7 @@ export function TimelineResume() {
                 className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
               />
             </a>
-            <a href="https://haken.vercel.app/" target="_blank" rel="noopener noreferrer" title="Commissariat des Armées">
+            <a href="https://haken.vercel.app/" target="_blank" rel="noopener noreferrer" title="Hakken">
               <img
                 src="./projects/hakken.png"
                 alt="hakken image"
@@ -114,7 +114,7 @@ export function TimelineResume() {
             </a>
             <a href="https://prometheus-x.org/" target="_blank" rel="noopener noreferrer" title="Prometheus-X">
               <img
-                src="./projects/prometheus.png"
+                src="./projects/prometheusx.png"
                 alt=" prometheus-x image"
                 width={500}
                 height={500}
@@ -131,7 +131,7 @@ export function TimelineResume() {
         <div>
           <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">{t('2021')}</p>
           <div className="grid grid-cols-2 gap-4">
-            <a href="https://nomad.defense.gouv.fr/connexion" target="_blank" rel="noopener noreferrer" title="NOMAD">
+            <a href="https://na.itron.com/en/problems-we-solve/water-conservation" target="_blank" rel="noopener noreferrer" title="Itrpn Water">
               <img
                 src="./projects/itron1.png"
                 alt="itron image"
@@ -141,10 +141,10 @@ export function TimelineResume() {
               />
             </a>
             <a
-              href="https://www.defense.gouv.fr/commissariat/actualites/nomad-solution-co-working-du-ministere-armees-developpee-sca"
+              href="https://fr.itron.com/fr/what-we-offer/non-revenue-water"
               target="_blank"
               rel="noopener noreferrer"
-              title="Commissariat des Armées"
+              title="Itron Non-revenue-water"
             >
               <img
                 src="./projects/itron2.png"
