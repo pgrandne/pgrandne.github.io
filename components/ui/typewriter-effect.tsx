@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils'
 import { motion, stagger, useAnimate, useInView } from 'motion/react'
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export const TypewriterEffect = ({
   words,
@@ -87,6 +87,8 @@ export const TypewriterEffectSmooth = ({
   words,
   className,
   cursorClassName,
+  keepCursorAfterAnimation = false,
+  delay = 1,
 }: {
   words: {
     text: string
@@ -94,7 +96,25 @@ export const TypewriterEffectSmooth = ({
   }[]
   className?: string
   cursorClassName?: string
+  keepCursorAfterAnimation?: boolean
+  delay?: number
 }) => {
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false)
+  const [hasAnimationStarted, setHasAnimationStarted] = useState(false)
+
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
+  useEffect(() => {
+    if (isInView && !hasAnimationStarted) {
+      const timer = setTimeout(() => {
+        setHasAnimationStarted(true)
+      }, delay * 1000)
+
+      return () => clearTimeout(timer)
+    }
+  }, [isInView, delay, hasAnimationStarted])
+
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
     return {
@@ -121,8 +141,10 @@ export const TypewriterEffectSmooth = ({
     )
   }
 
+  const shouldShowCursor = hasAnimationStarted && (!isAnimationComplete || keepCursorAfterAnimation)
+
   return (
-    <div className={cn('my-6 flex space-x-1', className)}>
+    <div className={cn('my-6 flex space-x-1', className)} ref={ref}>
       <motion.div
         className="overflow-hidden pb-2"
         initial={{
@@ -134,8 +156,10 @@ export const TypewriterEffectSmooth = ({
         transition={{
           duration: 2,
           ease: 'linear',
-          delay: 1,
+          delay: delay,
         }}
+        viewport={{ once: true }}
+        onAnimationComplete={() => setIsAnimationComplete(true)}
       >
         <div
           className="lg:text:3xl text-xs font-bold sm:text-base md:text-xl xl:text-5xl"
@@ -146,21 +170,22 @@ export const TypewriterEffectSmooth = ({
           {renderWords()}{' '}
         </div>{' '}
       </motion.div>
-      <motion.span
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.8,
-
-          repeat: Infinity,
-          repeatType: 'reverse',
-        }}
-        className={cn('block h-4 w-[4px] rounded-sm bg-blue-500 sm:h-6 xl:h-12', cursorClassName)}
-      ></motion.span>
+      {shouldShowCursor && (
+        <motion.span
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.8,
+            repeat: Infinity,
+            repeatType: 'reverse',
+          }}
+          className={cn('block h-4 w-[4px] rounded-sm bg-blue-500 sm:h-6 xl:h-12', cursorClassName)}
+        ></motion.span>
+      )}
     </div>
   )
 }

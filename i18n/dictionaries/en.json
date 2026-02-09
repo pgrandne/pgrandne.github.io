@@ -14,9 +14,9 @@
   "skills": {
     "title": "Skills",
     "description": "I work across the entire development lifecycle, from application design to production deployment, relying on a modern and proven technical stack.",
-    "development": "Development & Frameworks:",
-    "infra": "Infrastructure, Cloud & Databases:",
-    "tools": "Tooling, Code Quality & Collaboration:"
+    "development": ["Development", "&", "Frameworks:"],
+    "infra": ["Infrastructure,", "Cloud", "&", "Databases:"],
+    "tools": ["Tooling,", "Code Quality", "&", "Collaboration:"]
   },
   "vision": {
     "intro": "Trained as an engineer, I have been working for 15 years at the intersection of digital technology and the public interest, leveraging technology to support initiatives that serve the common good.",
