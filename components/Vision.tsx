@@ -7,8 +7,8 @@ export const Vision = () => {
   const t = useTranslations('vision')
 
   return (
-    <div className="p-1 w-full bg-background shadow-elevation-light dark:shadow-elevation-dark-three">
-      <div className="p-5 flex flex-col items-start shadow-elevation-light dark:shadow-elevation-dark-three bg-card/50">
+    <div className="bg-background shadow-elevation-light dark:shadow-elevation-dark-three w-full p-1 dark:text-neutral-300">
+      <div className="shadow-elevation-light dark:shadow-elevation-dark-three bg-card/50 flex flex-col items-start p-5">
         <div className="py-20 text-2xl font-bold tracking-tight md:text-4xl">
           <PointerHighlight>
             <span>Vision</span>
@@ -17,7 +17,7 @@ export const Vision = () => {
         <motion.div className="mb-10 md:mb-16">
           <LayoutTextFlip text={t('intro')} words={t.raw('split')} />
         </motion.div>
-        <p className="text-xl/10 md:text-2xl/12 mb-6 md:mb-8">{t('background')}</p>
+        <p className="mb-6 text-xl/10 md:mb-8 md:text-2xl/12">{t('background')}</p>
         <ul className="text-xl/10 md:text-2xl/12">
           <li className="mb-6 md:mb-8">{t('objectives.0')}</li>
           <li className="mb-20">{t('objectives.1')}</li>
