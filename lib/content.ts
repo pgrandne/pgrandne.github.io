@@ -108,12 +108,6 @@ export const INFRA_LIST = [
     image: './svgl/postgresql.svg',
   },
   {
-    id: 9,
-    name: 'Sentry',
-    designation: 'Monitoring',
-    image: './svgl/sentry.svg',
-  },
-  {
     id: 10,
     name: 'Shell',
     designation: 'Scripting',
@@ -173,7 +167,7 @@ export const TOOLS_LIST = [
   {
     id: 8,
     name: 'Sentry',
-    designation: 'Error tracking',
+    designation: 'Error tracking & Monitoring',
     image: './svgl/sentry.svg',
   },
   {
