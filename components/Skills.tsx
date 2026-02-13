@@ -26,7 +26,6 @@ export const Skills = () => {
           </PointerHighlight>
         </div>
         <p className="mb-6 text-xl/10 md:mb-8 md:text-2xl/12">{t('description')}</p>
-
         {/* DEVELOPMENT */}
         <div className="w-full space-y-8">
           <TypewriterEffectSmooth words={shapeWords(t.raw('development'))} cursorClassName="h-5 md:h-6 xl:h-6" className="items-center" />
@@ -48,7 +47,6 @@ export const Skills = () => {
             <AnimatedTooltip items={DEV_LIST} />
           </motion.div>
         </div>
-
         {/* INFRA */}
         <div className="w-full space-y-8">
           <TypewriterEffectSmooth words={shapeWords(t.raw('infra'))} cursorClassName="h-5 md:h-6 xl:h-6" className="items-center" delay={4} />
@@ -70,7 +68,6 @@ export const Skills = () => {
             <AnimatedTooltip items={INFRA_LIST} />
           </motion.div>
         </div>
-
         {/* TOOLS */}
         <div className="w-full space-y-8">
           <TypewriterEffectSmooth
@@ -99,18 +96,19 @@ export const Skills = () => {
             <AnimatedTooltip items={TOOLS_LIST} />
           </motion.div>
         </div>
-
-        {/* Mon expertise couvre notamment :
-        <br />
-        <br />
-        - Technique : Architecture logicielle et de données, développement, analyse de données, data science, conteneurisation, gestion de
-        l’infrastructure et automatisation des déploiements.
-        <br />
-        <br />
-        - Gestion de projet : Pilotage des coûts, délais et qualité, avec mise en place d’indicateurs clés et utilisation de la méthode Agile Scrum
-        (avec sprints courts)
-        <br />
-        <br />- Fonctionnel/Métier : Conception de solutions intuitives et utiles, centrées sur les besoins des utilisateurs et des équipes métiers */}
+        <div className="my-6 text-xl/10 md:mb-8 md:text-2xl/12">
+          Mon expertise couvre notamment :
+          <br />
+          <br />
+          - Technique : Architecture logicielle et de données, développement, analyse de données, data science, conteneurisation, gestion de
+          l’infrastructure et automatisation des déploiements.
+          <br />
+          <br />
+          - Gestion de projet : Pilotage des coûts, délais et qualité, avec mise en place d’indicateurs clés et utilisation de la méthode Agile Scrum
+          (avec sprints courts)
+          <br />
+          <br />- Fonctionnel/Métier : Conception de solutions intuitives et utiles, centrées sur les besoins des utilisateurs et des équipes métiers
+        </div>
       </motion.div>
     </div>
   )
