@@ -28,7 +28,7 @@ export const Skills = () => {
         <p className="mb-6 text-xl/10 md:mb-8 md:text-2xl/12">{t('description')}</p>
         {/* DEVELOPMENT */}
         <div className="w-full space-y-8">
-          <TypewriterEffectSmooth words={shapeWords(t.raw('development'))} cursorClassName="h-5 md:h-6 xl:h-6" className="items-center" />
+          <TypewriterEffectSmooth words={shapeWords(t.raw('development'))} cursorClassName="h-5 md:h-6 xl:h-8" className="items-center" />
           <motion.div
             className="mb-10 flex w-full flex-row items-center justify-center"
             initial={{
@@ -49,7 +49,7 @@ export const Skills = () => {
         </div>
         {/* INFRA */}
         <div className="w-full space-y-8">
-          <TypewriterEffectSmooth words={shapeWords(t.raw('infra'))} cursorClassName="h-5 md:h-6 xl:h-6" className="items-center" delay={4} />
+          <TypewriterEffectSmooth words={shapeWords(t.raw('infra'))} cursorClassName="h-5 md:h-6 xl:h-8" className="items-center" delay={4} />
           <motion.div
             className="mb-10 flex w-full flex-row items-center justify-center"
             initial={{
@@ -72,7 +72,7 @@ export const Skills = () => {
         <div className="w-full space-y-8">
           <TypewriterEffectSmooth
             words={shapeWords(t.raw('tools'))}
-            cursorClassName="h-5 md:h-6 xl:h-6"
+            cursorClassName="h-5 md:h-6 xl:h-8"
             className="items-center"
             delay={7}
             keepCursorAfterAnimation

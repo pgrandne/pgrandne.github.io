@@ -146,7 +146,7 @@ export const TypewriterEffectSmooth = ({
   return (
     <div className={cn('my-6 flex space-x-1', className)} ref={ref}>
       <motion.div
-        className="overflow-hidden pb-2"
+        className="overflow-hidden md:pb-2"
         initial={{
           width: '0%',
         }}
