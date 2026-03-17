@@ -13,7 +13,40 @@
   },
   "skills": {
     "title": "Skills",
-    "description": "I work across the entire development lifecycle, from application design to production deployment, relying on a modern and proven technical stack.",
+    "description": "I work across the entire development lifecycle, from application design to production deployment. My expertise includes:",
+    "intro": "I leverage a modern, proven tech stack to achieve this.",
+    "generalSkills": [
+      {
+        "id": "project",
+        "title": "Project Management",
+        "subSkills": [
+          { "id": 1, "label": "Project oversight: managing timelines, costs, and quality" },
+          { "id": 2, "label": "Definition and monitoring of key performance indicators (KPIs)" },
+          { "id": 3, "label": "Organization and facilitation of Agile/Scrum cycles (short sprints, prioritization)" },
+          { "id": 4, "label": "Coordination of technical teams and stakeholders" }
+        ]
+      },
+      {
+        "id": "functional",
+        "title": "Business / Functional",
+        "subSkills": [
+          { "id": 1, "label": "Requirements analysis and formalization of functional specifications" },
+          { "id": 2, "label": "Design of intuitive and useful solutions, centered on users and business teams" },
+          { "id": 3, "label": "Translation of business challenges into concrete technical solutions" },
+          { "id": 4, "label": "Collaboration with stakeholders to align product, usage, and objectives" }
+        ]
+      },
+      {
+        "id": "technical",
+        "title": "Technical",
+        "subSkills": [
+          { "id": 1, "label": "Software architecture and data architecture" },
+          { "id": 2, "label": "Data analysis, modeling, extraction, transformation, and visualization – data science" },
+          { "id": 3, "label": "Front-end and back-end development" },
+          { "id": 4, "label": "Containerization, infrastructure management, and deployment automation (DevOps)" }
+        ]
+      }
+    ],
     "development": ["Development", "&", "Frameworks:"],
     "infra": ["Infrastructure,", "Cloud", "&", "Databases:"],
     "tools": ["Tooling,", "Code Quality", "&", "Collaboration:"]

@@ -13,7 +13,40 @@
   },
   "skills": {
     "title": "Compétences",
-    "description": "J’interviens sur l’ensemble du cycle de développement, de la conception applicative à la mise en production, en m’appuyant sur un socle technique moderne et éprouvé.",
+    "description": "J’interviens sur l’ensemble du cycle de développement, de la conception applicative à la mise en production. Mon expertise couvre :",
+    "intro": "Pour cela je m'appuie sur un socle technique moderne et éprouvé.",
+    "generalSkills": [
+      {
+        "id": "project",
+        "title": "Gestion de projet",
+        "subSkills": [
+          { "id": 1, "label": "Pilotage de projets : gestion des délais, des coûts et de la qualité" },
+          { "id": 2, "label": "Définition et suivi d’indicateurs clés de performance (KPI)" },
+          { "id": 3, "label": "Organisation et animation de cycles Agile / Scrum (sprints courts, priorisation)" },
+          { "id": 4, "label": "Coordination des équipes techniques et des parties prenantes" }
+        ]
+      },
+      {
+        "id": "functional",
+        "title": "Fonctionnel/Métier",
+        "subSkills": [
+          { "id": 1, "label": "Analyse des besoins et formalisation des exigences fonctionnelles" },
+          { "id": 2, "label": "Conception de solutions intuitives et utiles, centrées sur les utilisateurs et les équipes métiers" },
+          { "id": 3, "label": "Traduction des enjeux métier en solutions techniques concrètes" },
+          { "id": 4, "label": "Collaboration étroite avec les parties prenantes pour aligner produit, usage et objectifs métier" }
+        ]
+      },
+      {
+        "id": "technical",
+        "title": "Technique",
+        "subSkills": [
+          { "id": 1, "label": "Architecture logicielle et architecture de données" },
+          { "id": 2, "label": "Analyse, modélisation, extraction, mise en forme et visualisation de données – data science" },
+          { "id": 3, "label": "Développement Front-end/Back-end" },
+          { "id": 4, "label": "Conteneurisation, gestion d’infrastructure et automatisation des déploiements (DevOps)" }
+        ]
+      }
+    ],
     "development": ["Développement", " & ", "Frameworks : "],
     "infra": ["Infrastructure,", "cloud", "&", "bases de données :"],
     "tools": ["Outillage,", "qualité", "&", "collaboration :"]
