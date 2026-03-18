@@ -15,7 +15,7 @@ export const Skills = () => {
   const shapeWords = (words: string[]) => {
     const shapedWords = words.map((word) => ({
       text: word,
-      className: 'text-xl/10 md:text-2xl/12',
+      className: 'text-lg md:text-2xl/12',
     }))
     return shapedWords
   }
