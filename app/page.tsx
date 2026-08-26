@@ -29,7 +29,6 @@ export default function Home() {
                 <CardName />
                 <CardPicture />
               </div>
-              <HeroLinks />
             </section>
             <section id="vision" className="flex w-full gap-3">
               <Vision />
