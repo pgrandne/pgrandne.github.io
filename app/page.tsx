@@ -24,7 +24,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-4">
           <Navbar />
           <main className="flex flex-col items-center gap-8 md:items-start">
-            <section className="relative flex h-[calc(100dvh-140px)] w-full flex-col items-center gap-3">
+            <section className="relative flex w-full flex-col items-center gap-3">
               <div className="mt-20 flex w-full gap-3 md:mt-0">
                 <CardName />
                 <CardPicture />
